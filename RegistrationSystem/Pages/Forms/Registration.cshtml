@@ -1,0 +1,26 @@
+﻿@page
+@model RegistrationSystem.Pages.Forms.RegistrationModel
+@{
+    ViewData["Title"] = "Create An Account";
+}
+
+<div asp-validation-summary="All" style="color:red"></div>
+
+    <div class="container-fluid bg-light" style="border-radius:10px; height:10%; width:50%">
+        <h3><b>CREATE AN ACCOUNT</b></h3>
+        <form method="post">
+            <input class="form-control" asp-for="Register.Name" placeholder="NAME" required/><br />
+            <input class="form-control" asp-for="Register.Email" placeholder="EMAIL" required/><br />
+            <input class="form-control" asp-for="Register.Address" placeholder="ADDRESS" required/><br />
+            <input class="form-control" asp-for="Register.Contact" placeholder="CONTACT" required/><br />
+            <input class="form-control" asp-for="Register.Age" placeholder="AGE" required/><br />
+            GENDER:
+            <input type="radio" name="Register.Gender" value="Male" > Male
+            <input type="radio" name="Register.Gender" value="Female"> Female<br><br>
+            <input class="form-control" asp-for="Register.Password" placeholder="PASSWORD" required/><br>
+            <input class="form-control" asp-for="Register.ConfirmPassword" placeholder="CONFIRM PASSWORD" required/><br>
+            <button class="btn btn-warning btn-md" type="submit">Create</button><br><br>
+
+        </form>
+    </div>
+
