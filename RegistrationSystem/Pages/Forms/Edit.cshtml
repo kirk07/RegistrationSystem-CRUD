@@ -1,0 +1,25 @@
+﻿@page
+@model RegistrationSystem.Pages.Forms.EditModel
+@{
+}
+
+<div asp-validation-summary="All" style="color:red"></div>
+
+<div class="container-fluid bg-light" style="border-radius:10px; height:10%; width:50%">
+    <h3><b>UPDATE USERS ACCOUNT</b></h3>
+    <form method="post">
+        <input type="hidden" asp-for="edit.PersonID" />
+        <input class="form-control" asp-for="edit.Name" placeholder="NAME" required /><br />
+        <input class="form-control" asp-for="edit.Email" placeholder="EMAIL" required /><br />
+        <input class="form-control" asp-for="edit.Address" placeholder="ADDRESS" required /><br />
+        <input class="form-control" asp-for="edit.Contact" placeholder="CONTACT" required /><br />
+        <input class="form-control" asp-for="edit.Age" placeholder="AGE" required /><br />
+        GENDER:
+        <input type="radio" name="edit.Gender" value="Male"> Male
+        <input type="radio" name="edit.Gender" value="Female"> Female<br><br>
+        <input class="form-control" asp-for="edit.Password" placeholder="PASSWORD" required /><br>
+        <input class="form-control" asp-for="edit.ConfirmPassword" placeholder="CONFIRM PASSWORD" required /><br>
+        <button class="btn btn-warning btn-md" type="submit">Update</button><br><br>
+
+    </form>
+</div>
